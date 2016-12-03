@@ -2,7 +2,7 @@
 * @Author: yannik
 * @Date:   2016-12-03T21:46:02+01:00
 * @Last modified by:   yannik
-* @Last modified time: 2016-12-03T23:31:30+01:00
+* @Last modified time: 2016-12-04T00:45:23+01:00
 */
 
 
@@ -13,6 +13,7 @@
 body {
     font-family: 'Heebo', sans-serif;
     background-color: #80deea;
+    margin: 0;
 }
 
 main {
@@ -157,4 +158,10 @@ input {
 
 .conf > span > span {
     display: block;
+}
+
+footer {
+    width: 100%;
+    background-color: #26c6da;
+    padding: 10px;
 }
