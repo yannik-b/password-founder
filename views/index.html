@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+@Author: Yannik Buerkle <mail@yannik-buerkle.de>
+@Date:   2016-12-03T20:28:25+01:00
+@Last modified by:   yannik
+@Last modified time: 2016-12-03T23:59:38+01:00
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Password Generator</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#80deea">
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script async src="/main.js"></script>
+    <script async src="/PwGen.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Password Generator</h1>
+        <section class="config">
+            Every web page needs a password. Best, every page an own password.
+            If you don't creative enough to invent super special passwords, you
+            can create some passwords here.<br>
+            None of the generated passwords are transmitted to our servers. They
+            are all generated locally in your own browser.
+        </section>
+        <section class="list">
+            <form action="#">
+                <div class="conf">
+                    <input type="number" value="1" min="1" step="1" id="pwgen_count" class="input">
+                    <span>Count</span>
+                </div>
+                <div class="conf">
+                    <input type="number" value="8" min="1" step="1" id="pwgen_length" class="input">
+                    <span>Length</span>
+                </div>
+                <div class="conf">
+                    <input type="checkbox" checked="checked" id="pwgen_lowercase" class="input">
+                    <span>
+                        <span>Lowercase</span>
+                        <span class="desc">abcdefghijklmnopqrstuvwxyz</span>
+                    </span>
+                </div>
+                <div class="conf">
+                    <td><input type="checkbox" checked="checked" id="pwgen_uppercase" class="input"></td>
+                    <span>
+                        <span>Uppercase</span>
+                        <span class="desc">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+                    </span>
+                </div>
+                <div class="conf">
+                    <input type="checkbox" checked="checked" id="pwgen_numbers" class="input">
+                    <span>
+                        <span>Numbers</span>
+                        <span class="desc">0123456789</span>
+                    </span>
+
+                </div>
+                <div class="conf">
+                    <input type="checkbox" id="pwgen_utf" class="input">
+                    <span>
+                        <span>UTF-8 Characters</span>
+                        <span class="desc">àèìòùáéíóúâêîôû</span>
+                    </span>
+
+                </div>
+                <div class="conf">
+                    <input type="checkbox" checked="checked" id="pwgen_special" class="input">
+                    <span>Special Characters</span>
+                </div>
+                <div class="conf">
+                    <td><input type="text" value="^°!§$%&/()=?`*'><,.-#+´}][{€@|\~" id="pwgen_allowedSpecial" class="input"></td>
+                    <td>Allowed Special Characters</td>
+
+                </div>
+                <button id="pwgen_generate">Generate</button>
+            </form>
+        </section>
+        <section class="config">
+            <span id="clear">Clear</span>
+            <h2>Passwords</h2>
+            <div id="pwlist"></div>
+        </section>
+        <section class="config ad">
+
+        </section>
+    </main>
+</body>
+</html>

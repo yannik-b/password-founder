@@ -1,0 +1,13 @@
+{
+  "name": "Passwort-Generator",
+  "version": "0.0.1",
+  "description": "Passwort Generator",
+  "main": "app.js",
+  "repository": "git@github.com:yannik-b/Passwort-Generator.git",
+  "author": "Yannik Buerkle <mail@yannik-buerkle.de>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "marko": "^3.13.0"
+  }
+}

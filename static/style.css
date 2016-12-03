@@ -1,0 +1,160 @@
+/**
+* @Author: yannik
+* @Date:   2016-12-03T21:46:02+01:00
+* @Last modified by:   yannik
+* @Last modified time: 2016-12-03T23:31:30+01:00
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background-color: #80deea;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+section.config {
+    background-color: #e0f7fa;
+}
+
+section.list {
+    background-color: #fff;
+}
+
+h1 {
+    color: #fff;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 450px) {
+    main {
+        width: 95%;
+    }
+
+    body {
+        font-size: 120%;
+    }
+
+    input[type=number], input[type=text] {
+        font-size: 120%;
+        max-width: 50%;
+        border: 0;
+        border-bottom: 2px solid green;
+    }
+
+    td {
+        padding-bottom: 10px;
+    }
+
+    .hasDesc td {
+        padding-bottom: 0px;
+    }
+
+    input[type=checkbox] {
+
+            -ms-transform: scale(1.5); /* IE */
+           -moz-transform: scale(1.5); /* FF */
+        -webkit-transform: scale(1.5); /* Safari and Chrome */
+             -o-transform: scale(1.5); /* Opera */
+    }
+}
+
+@media screen and (min-width: 587px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 786px) {
+    main {
+        width: 60%;
+    }
+}
+
+button {
+    background-color: #80deea;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    padding: 7px 13px;
+    color: white;
+    margin-top: 21px;
+}
+
+table {
+    width: 100%;
+}
+
+input {
+    float: right;
+    outline: none;
+}
+
+#clear {
+    float: right;
+    font-size: 70%;
+    cursor: pointer;
+    transition: background-color 0.45s ease-in-out;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#clear:hover {
+    background-color: #ff7171;
+}
+
+#pwstrength {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#pwstrength::after {
+    content: '.';
+    float: none;
+    clear: both;
+    color: transparent;
+}
+
+#pwstrength span {
+    width: calc(20% - 10px);
+    background-color: #dedede;
+    display: inline-block;
+    height: 10px;
+    float: left;
+    margin: 5px;
+}
+
+.desc {
+    color: grey;
+    font-size: 80%;
+    max-width: auto;
+}
+
+.conf::after {
+    content: '.';
+    float: none;
+    clear: both;
+    visibility: hidden;
+    display: block;
+}
+
+.conf > span > span {
+    display: block;
+}
