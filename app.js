@@ -20,7 +20,7 @@ const express = require('express'),
 app.use(express.static(__dirname + '/static/'))
 
 app.get('/', (req, res, next) => {
-    fs.readFile('views/index.html', (err, fd) => {
+    fs.readFile(__dirname + '/views/index.html', (err, fd) => {
         if (err) return next(err)
         res.header('Content-Type', 'text/html; charset=utf-8')
         res.send(fd)
